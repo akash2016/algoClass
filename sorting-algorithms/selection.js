@@ -76,3 +76,24 @@ function defaultComparator(a,b) {
   else if (a > b) return 1; // b comes first
   return 0;
 };
+
+
+// My Solution
+
+function selection(arr){
+  var temp='';
+  for(let i=0;i<arr.length;i++){
+    let minIndex=i;
+    for(let j=i;j<arr.length;j++){
+      if(arr[j] < arr[minIndex]){
+        minIndex=j;
+      }
+    }
+    temp=arr[i];
+    arr[i]=arr[minIndex];
+    arr[minIndex]=temp;
+  }
+  return arr;
+}
+
+console.log(selection([2,6,9,0,5,2,99,-8,-89]));
