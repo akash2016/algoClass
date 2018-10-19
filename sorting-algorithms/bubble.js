@@ -58,3 +58,24 @@ function swap(arr, i1, i2) {
   arr[i1] = arr[i1]^arr[i2];
   return arr;
 }
+
+//My Solution
+
+function bubble(arr){
+  var temp='';
+  for(i=1;i<=arr.length-1;i++){
+    for(j=0;j<=arr.length-i-1;j++){
+      if(arr[j]>arr[j+1]){
+        temp=arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=temp;
+      }
+      
+    }
+    console.log(i,arr);
+  }
+  return arr;
+  
+}
+
+console.log(bubble([5,9,0,2,-1,8,9,4,-10]));
